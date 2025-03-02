@@ -3,7 +3,8 @@
         "base_path": "D:\\Thiago\\Data Science - Faculdade\\Projeto de Extensão 1\\databases\\",
         "name": "supermarket_inventory_data2.xlsx",
         "type": "xlsx",
-        "encoding": "mbcs"
+        "encoding": "mbcs",
+        "archive_path": "D:\\Thiago\\Data Science - Faculdade\\Projeto de Extensão 1\\backup\\"
     },
     "db": {
         "server": "DESKTOP-DH78H1C\\SQLEXPRESS",

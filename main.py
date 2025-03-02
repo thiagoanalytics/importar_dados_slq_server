@@ -2,6 +2,8 @@ import json
 import pandas as pd
 import pyodbc
 import os
+import shutil
+import zipfile
 
 def load_config(config_path):
     with open(config_path, 'r', encoding='utf-8') as file:
@@ -79,6 +81,25 @@ def insert_data(cursor, conn, df, table_name):
         print(f"Erro ao inserir dados: {e}")
         conn.rollback()  # Caso ocorra erro, faz rollback
 
+def move_and_zip_file(file_path, target_path):
+    # Mover apenas o arquivo zip para o novo diretório
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
+
+    # Caminho completo do arquivo zipado
+    zip_file_path = os.path.join(target_path, os.path.basename(file_path).replace('.xlsx', '.zip'))
+
+    # Compactar o arquivo em formato .zip
+    with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        zipf.write(file_path, os.path.basename(file_path))
+    
+    print(f"Arquivo {file_path} foi compactado e movido para {zip_file_path}")
+    
+    # Excluir o arquivo .xlsx original
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        print(f"Arquivo {file_path} excluído com sucesso!")
+
 def main():
     config = load_config('config/config.json')
     
@@ -104,6 +125,12 @@ def main():
     # Verificar se os dados foram inseridos corretamente
     cursor.execute(f"SELECT COUNT(*) FROM {config['db']['table']}")
     print(f"Total de registros na tabela após inserção: {cursor.fetchone()[0]}")
+    
+    # Compactar, mover e excluir o arquivo .xlsx
+    move_and_zip_file(
+        os.path.join(config['file']['base_path'], config['file']['name']),
+        config['file']['archive_path']
+    )
     
     cursor.close()
     conn.close()
