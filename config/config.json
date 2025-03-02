@@ -1,38 +1,23 @@
 {
     "file": {
-        "base_path": "D:\\Thiago\\Data Science - Faculdade\\Projeto de Extensão 1\\databases\\",
-        "name": "supermarket_inventory_data2.xlsx",
+        "base_path": "C:\\CAMINHO_DA_BASE\\",
+        "name": "NOME_DO_ARQUIVO.xlsx",
         "type": "xlsx",
         "encoding": "mbcs",
-        "archive_path": "D:\\Thiago\\Data Science - Faculdade\\Projeto de Extensão 1\\backup\\"
+        "archive_path": "C:\\CAMINHO_DO_BACKUP\\"
     },
     "db": {
-        "server": "DESKTOP-DH78H1C\\SQLEXPRESS",
-        "database": "dbCursoCienciaDados",
-        "user": "thiago_dev",
-        "password": "123456789",
-        "table": "Stage.StgSupermarketInventary"
+        "server": "SERVIDOR_BANCO_SQL",
+        "database": "NOME_DO_BANCO",
+        "user": "USUARIO",
+        "password": "SENHA",
+        "table": "NOME_DA_TABELA"
     },
     "column_mapping": {
-        "Date" : "Date",
-        "ProductID" : "ProductID",
-        "ProductName" : "ProductName",
-        "Category" : "Category",
-        "Supplier" : "Supplier",
-        "UnitPrice" : "UnitPrice",
-        "StockQuantity" : "StockQuantity",
-        "StockValue" : "StockValue",
-        "ReorderLevel" : "ReorderLevel",
-        "ReorderQuantity" : "ReorderQuantity",
-        "UnitsSold" : "UnitsSold",
-        "SalesValue" : "SalesValue",
-        "LastSoldDate" : "LastSoldDate",
-        "LastRestockDate" : "LastRestockDate",
-        "NextRestockDate" : "NextRestockDate",
-        "DeliveryTimeDays" : "DeliveryTimeDays",
-        "DeliveryStatus" : "DeliveryStatus",
-        "NextExpiryDate" : "NextExpiryDate",
-        "UnitsExpire" : "UnitsExpire"
+        "COLUNA1_BASE" : "COLUNA1_BANCO",
+        "COLUNA2_BASE" : "COLUNA2_BANCO",
+        "COLUNA3_BASE" : "COLUNA3_BANCO"
+        
 
     }
 }
