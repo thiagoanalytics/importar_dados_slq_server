@@ -1,0 +1,37 @@
+{
+    "file": {
+        "base_path": "D:\\Thiago\\Data Science - Faculdade\\Projeto de Extensão 1\\databases\\",
+        "name": "supermarket_inventory_data2.xlsx",
+        "type": "xlsx",
+        "encoding": "mbcs"
+    },
+    "db": {
+        "server": "DESKTOP-DH78H1C\\SQLEXPRESS",
+        "database": "dbCursoCienciaDados",
+        "user": "thiago_dev",
+        "password": "123456789",
+        "table": "Stage.StgSupermarketInventary"
+    },
+    "column_mapping": {
+        "Date" : "Date",
+        "ProductID" : "ProductID",
+        "ProductName" : "ProductName",
+        "Category" : "Category",
+        "Supplier" : "Supplier",
+        "UnitPrice" : "UnitPrice",
+        "StockQuantity" : "StockQuantity",
+        "StockValue" : "StockValue",
+        "ReorderLevel" : "ReorderLevel",
+        "ReorderQuantity" : "ReorderQuantity",
+        "UnitsSold" : "UnitsSold",
+        "SalesValue" : "SalesValue",
+        "LastSoldDate" : "LastSoldDate",
+        "LastRestockDate" : "LastRestockDate",
+        "NextRestockDate" : "NextRestockDate",
+        "DeliveryTimeDays" : "DeliveryTimeDays",
+        "DeliveryStatus" : "DeliveryStatus",
+        "NextExpiryDate" : "NextExpiryDate",
+        "UnitsExpire" : "UnitsExpire"
+
+    }
+}
